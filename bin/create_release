@@ -395,13 +395,8 @@ class ReleaseCreator
     print 'Updating version...'
     message, status = Bump::Bump.run(options.release_type, commit: false)
     error 'Could not bump version' unless status == 0
-    version_file = `bump file`.chomp
-    if $CHILD_STATUS.success?
-      puts 'OK'
-    else
-      error 'Could not get version file'
-    end
-    `git add #{version_file}`
+    version_file = Bump::Bump.file
+    `git add '#{version_file}'`
     if $CHILD_STATUS.success?
       puts 'OK'
     else
