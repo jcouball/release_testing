@@ -7,6 +7,10 @@
 
 The full change log is stored on [this project's GitHub releases page](https://github.com/jcouball/active_model_persistence/releases).
 
+## v0.5.0
+
+See https://github.com/ruby-git/ruby-git/releases/tag/v0.5.0
+
 ## v0.4.0
 
 See https://github.com/ruby-git/ruby-git/releases/tag/v0.4.0
